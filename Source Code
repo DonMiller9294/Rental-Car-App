@@ -1,0 +1,61 @@
+import tkinter as tk
+from tkinter import ttk
+from tkinter import messagebox
+
+
+
+# Add widgets and functionality to your application here
+
+class rental_carApp:
+    def __init__(self,root):
+        self.root = root
+        self.root.title("Rental Car Application")
+
+        # Create a label for the title
+        title_label = tk.Label(root, text="Rental Car Application", font=("Helvetica", 16))
+        title_label.pack(pady=10)
+
+        #create a label for the car selection
+        car_label = tk.Label(root, text="Select a Car:")
+        car_label.pack()
+
+        #create a dropdown list for car selection
+        car_choices = ["Compact", "Sedan", "SUV", "Luxury"]
+        self.car_var = tk.StringVar()
+        car_dropdown = ttk.Combobox(root, textvariable=self.car_var, values=car_choices)
+        car_dropdown.pack()
+
+        # Create labels and entry fields for rental dates
+        date_label = tk.Label(root, text="Rental Dates:")
+        date_label.pack()
+
+        self.start_date_var = tk.StringVar()
+        self.end_date_var = tk.StringVar()
+
+        start_date_entry = tk.Entry(root, textvariable=self.start_date_var)
+        start_date_entry.pack()
+
+        end_date_entry = tk.Entry(root, textvariable=self.end_date_var)
+        end_date_entry.pack()
+
+        #Create a button to make a reservation
+        reserve_button = tk.Button(root,  text="Make Reservation", command=self.make_reservation)
+        reserve_button.pack(pady=20)  
+
+    def make_reservation(self):
+        # retrieve user inputs
+        car_choice = self.car_var.get()
+        start_date = self.start_date_var.get()
+        end_date = self.end_date_var.get()  
+
+        # You can add your own reservation logic 
+        reservation_message = f"Reservation made for a {car_choice} from {start_date} to {end_date}."
+        tk.messagebox.showinfo("Reservation Confirmation", reservation_message)
+
+if __name__=="__main__":
+    root = tk.Tk()
+    app = rental_carApp(root)
+    root.mainloop()    
+
+# Start the Tkinter main loop
+root.mainloop()
