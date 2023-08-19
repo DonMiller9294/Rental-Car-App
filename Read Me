@@ -1,0 +1,68 @@
+
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Getting Started
+
+### Prerequisites
+
+Before running the application, make sure you have Python installed on your system. You can download Python from the official website: [Python Downloads](https://www.python.org/downloads/).
+
+### Installation
+
+1. Clone the repository to your local machine using Git:
+
+   ```bash
+   git clone https://github.com/your-username/rental-car-app.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd rental-car-app
+   ```
+
+3. Run the application:
+
+   ```bash
+   python rental_car_app.py
+   ```
+
+## Usage
+
+1. Launch the application by running `rental_car_app.py`.
+2. Select a car type (Compact, Sedan, SUV, Luxury) from the dropdown list.
+3. Enter the start and end rental dates in the respective text fields.
+4. Click the "Make Reservation" button to make a reservation.
+5. A confirmation message will be displayed.
+
+## Features
+
+- **Car Selection:** Users can choose from different car types.
+- **Rental Dates:** Users can specify the start and end rental dates.
+- **Reservation Confirmation:** Users receive a confirmation message after making a reservation.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add new feature'`.
+4. Push to your forked repository: `git push origin feature-name`.
+5. Create a pull request to the `main` branch of the original repository.
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
